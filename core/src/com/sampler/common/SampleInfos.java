@@ -8,6 +8,7 @@ import com.sampler.InputListeningSample;
 import com.sampler.InputPollingSample;
 import com.sampler.OrthographicCameraSample;
 import com.sampler.ShapeRendererSample;
+import com.sampler.TileBreaks;
 import com.sampler.ViewportSample;
 import com.sampler.WheelRotate;
 
@@ -31,6 +32,7 @@ public class SampleInfos {
             OrthographicCameraSample.SAMPLE_INFO,
             ViewportSample.SAMPLE_INFO,
             WheelRotate.SAMPLE_INFO,
+            TileBreaks.SAMPLE_INFO,
             ShapeRendererSample.SAMPLE_INFO
     );
 
