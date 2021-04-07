@@ -1,16 +1,33 @@
 package com.sampler.common;
 
+import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class LetterTile {
     private float x;
     private float y;
-    private TextureRegion textureRegion;
-
-    public LetterTile(float x, float y, TextureRegion textureRegion) {
+    private Image image;
+    private String letter;
+    public LetterTile(float x, float y, TextureRegion textureRegion, String letter) {
         this.x = x;
         this.y = y;
-        this.textureRegion = textureRegion;
+        this.image = new Image(textureRegion);
+        if (!letter.equals("blank")){
+            this.letter = letter;
+        }else{
+            this.letter = "";
+        }
+        image.setPosition(x,y);
+        image.setSize(1f, 1f);
+    }
+
+    public String getLetter() {
+        return letter;
+    }
+
+    public void setLetter(String letter) {
+        this.letter = letter;
     }
 
     public float getX() {
@@ -29,11 +46,11 @@ public class LetterTile {
         this.y = y;
     }
 
-    public TextureRegion getTextureRegion() {
-        return textureRegion;
+    public Image getImage() {
+        return image;
     }
 
-    public void setTextureRegion(TextureRegion textureRegion) {
-        this.textureRegion = textureRegion;
+    public void setImage(Image image) {
+        this.image = image;
     }
 }
